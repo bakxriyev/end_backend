@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsOptional, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 
 export class CreateDirectionDoctorDto {
   @ApiProperty({ example: 1 })
@@ -11,10 +11,10 @@ export class CreateDirectionDoctorDto {
   direction_id?: number;
 
   @ApiProperty({ type: 'string', format: 'binary', required: false })
-@IsOptional()
+  @IsString()
   photo?: any;
 
   @ApiProperty({ type: 'string', format: 'binary', required: false })
-@IsOptional()
+  @IsString()
   video?: any;
 }
