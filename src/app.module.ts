@@ -37,6 +37,8 @@ import { AuthModule } from "./modules/auth/auth.module";
 import { Usercha, UserchaModule } from "./modules/usercha";
 import { ServiceDetailModule } from './modules/service_details/service_details.module';
 import {ServiceDetail} from './modules/service_details/entities/service_detail.entity'
+import { LeadModule } from './modules/leads/leads.module';
+import { UserPhotoModule } from './modules/user-photos/user-photos.module';
 @Module({
   imports: [
     // Static uploads folder
@@ -84,7 +86,9 @@ import {ServiceDetail} from './modules/service_details/entities/service_detail.e
     ServiceModule,
     AuthModule,
     UserchaModule,
-    ServiceDetailModule
+    ServiceDetailModule,
+    LeadModule,
+    UserPhotoModule
     // Mailer setup
     // MailerModule.forRootAsync({
     //   imports: [ConfigModule],
