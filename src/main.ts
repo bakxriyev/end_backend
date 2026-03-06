@@ -18,8 +18,11 @@ async function bootstrap() {
   );
 
   // Enable CORS
-  app.enableCors({ origin: "*" });
-
+ app.enableCors({
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+  allowedHeaders: "Content-Type, Accept, Authorization",
+});
   // Swagger config
   const swaggerConfig = new DocumentBuilder()
     .setTitle("Clinic Management System")
